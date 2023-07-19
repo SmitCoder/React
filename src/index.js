@@ -5,6 +5,7 @@ import Book from "./Book";
 import "./index.css";
 import Usestate from "./Usestate";
 import UseArray from "./UseArray";
+import Useobject from "./Useobject";
 
 function Booklist() {
   return (
@@ -18,5 +19,6 @@ function Booklist() {
 }
 <Usestate />;
 <UseArray />;
+<Useobject />;
 
-ReactDOM.render(<UseArray />, document.getElementById("root"));
+ReactDOM.render(<Useobject />, document.getElementById("root"));
