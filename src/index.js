@@ -6,6 +6,7 @@ import "./index.css";
 import Usestate from "./Usestate";
 import UseArray from "./UseArray";
 import Useobject from "./Useobject";
+import Simplecounter from "./Simplecounter";
 
 function Booklist() {
   return (
@@ -20,5 +21,6 @@ function Booklist() {
 <Usestate />;
 <UseArray />;
 <Useobject />;
+<Simplecounter />;
 
-ReactDOM.render(<Useobject />, document.getElementById("root"));
+ReactDOM.render(<Simplecounter />, document.getElementById("root"));
