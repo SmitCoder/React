@@ -11,6 +11,7 @@ import Useeffect_basic from "./useeffect hook/Useeffect_basic";
 import Useeffect_cleanup from "./useeffect hook/Useeffect_cleanup";
 import Useeffect_fetchdata from "./useeffect hook/Useeffect_fetchdata";
 import Multiple_returns from "./useeffect hook/Multiple_returns";
+import Short_circuit from "./conditional rendering/Short_circuit";
 
 function Booklist() {
   return (
@@ -30,5 +31,6 @@ function Booklist() {
 <Useeffect_cleanup />;
 <Useeffect_fetchdata />;
 <Multiple_returns />;
+<Short_circuit />;
 
-ReactDOM.render(<Multiple_returns />, document.getElementById("root"));
+ReactDOM.render(<Short_circuit />, document.getElementById("root"));
