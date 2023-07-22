@@ -13,6 +13,7 @@ import Useeffect_fetchdata from "./useeffect hook/Useeffect_fetchdata";
 import Multiple_returns from "./useeffect hook/Multiple_returns";
 import Short_circuit from "./conditional rendering/Short_circuit";
 import Show_hide from "./conditional rendering/Show_hide";
+import Basic from "./Forms/Basic";
 
 function Booklist() {
   return (
@@ -34,5 +35,6 @@ function Booklist() {
 <Multiple_returns />;
 <Show_hide />;
 <Short_circuit />;
+<Basic />;
 
-ReactDOM.render(<Show_hide />, document.getElementById("root"));
+ReactDOM.render(<Basic />, document.getElementById("root"));

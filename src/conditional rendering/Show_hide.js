@@ -28,7 +28,7 @@ const Item = () => {
   return (
     <>
       <div className="container">
-        <h1>Window</h1>
+        <h1> made by tirth</h1>
         <h2>Size: {size}</h2>
       </div>
     </>
