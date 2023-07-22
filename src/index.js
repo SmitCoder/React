@@ -14,6 +14,7 @@ import Multiple_returns from "./useeffect hook/Multiple_returns";
 import Short_circuit from "./conditional rendering/Short_circuit";
 import Show_hide from "./conditional rendering/Show_hide";
 import Basic from "./Forms/Basic";
+import Multiple_inputs from "./Forms/Multiple_inputs";
 
 function Booklist() {
   return (
@@ -36,5 +37,6 @@ function Booklist() {
 <Show_hide />;
 <Short_circuit />;
 <Basic />;
+<Multiple_inputs />;
 
-ReactDOM.render(<Basic />, document.getElementById("root"));
+ReactDOM.render(<Multiple_inputs />, document.getElementById("root"));
