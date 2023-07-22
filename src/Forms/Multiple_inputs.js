@@ -1,21 +1,23 @@
 import React, { useState } from "react";
+import Usestate from "../Usestate";
 
 const Multiple_inputs = () => {
-  const [name, setname] = useState("");
-  const [email, setemail] = useState("");
-  const [age, setage] = useState("");
+  //   const [name, setname] = useState("");
+  //   const [email, setemail] = useState("");
+  //   const [age, setage] = useState("");
+  const [person, setperson] = useState({ name: "", email: "", age: "" });
   const [people, setpeople] = useState([]);
+  const handlechange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setperson({ ...person, [name]: value });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name && email && age) {
-      const person = { name: name, email: email, age: age };
-      console.log(person);
-      setpeople((people) => {
-        return [...people, person];
-      });
-      setname("");
-      setemail("");
-      setage("");
+    if (person.name && person.email && person.age) {
+      const newperson = { ...person };
+      setpeople([...people, newperson]);
+      setperson({ name: "", email: "", age: "" });
     } else {
       return "empty values";
     }
@@ -30,24 +32,24 @@ const Multiple_inputs = () => {
               type="text"
               id="name"
               name="name"
-              value={name}
-              onChange={(e) => setname(e.target.value)}
+              value={person.name}
+              onChange={handlechange}
             ></input>
             <label>Email: </label>
             <input
               type="text"
               id="email"
               name="email"
-              value={email}
-              onChange={(e) => setemail(e.target.value)}
+              value={person.email}
+              onChange={handlechange}
             ></input>
             <label>Age: </label>
             <input
               type="number"
               id="age"
               name="age"
-              value={age}
-              onChange={(e) => setage(e.target.value)}
+              value={person.age}
+              onChange={handlechange}
             ></input>
           </div>
           <button type="submit">Add Person</button>
