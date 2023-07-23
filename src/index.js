@@ -15,6 +15,7 @@ import Short_circuit from "./conditional rendering/Short_circuit";
 import Show_hide from "./conditional rendering/Show_hide";
 import Basic from "./Forms/Basic";
 import Multiple_inputs from "./Forms/Multiple_inputs";
+import Useref from "./useref/Useref";
 
 function Booklist() {
   return (
@@ -38,5 +39,5 @@ function Booklist() {
 <Short_circuit />;
 <Basic />;
 <Multiple_inputs />;
-
-ReactDOM.render(<Multiple_inputs />, document.getElementById("root"));
+<Useref />;
+ReactDOM.render(<Useref />, document.getElementById("root"));
