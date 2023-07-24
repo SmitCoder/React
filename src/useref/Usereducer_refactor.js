@@ -6,12 +6,20 @@ const reducer = (state, action) => {
   if (action.type === "ADD_ITEMS") {
     const newPeople = [...state.people, action.payload];
     return { ...state, people: newPeople, modelcontent: "item added" };
-  } else {
-    if (action.type === "NOTHING") {
-      console.log(state, action);
-      return { ...state, modelcontent: "please enter a nsme" };
-    }
   }
+  //   if (action.type === "NOTHING");
+  //   {
+  //     console.log(state, action);
+  //     return { ...state, modelcontent: "please enter a nsme" };
+  //   }
+  if (action.type === "REMOVE_ITEMS");
+  {
+    const newPeople = state.people.filter(
+      (person) => person.id !== action.payload
+    );
+    return { ...state, people: newPeople };
+  }
+  return new Error("no matching type");
 };
 const defaultstate = {
   people: [],
@@ -52,6 +60,11 @@ const Userefactor_usestate = () => {
           return (
             <div key={id}>
               <h4>{name}</h4>
+              <button
+                onClick={() => dispatch({ type: "REMOVE_ITEMS", payload: id })}
+              >
+                remove
+              </button>
             </div>
           );
         })}
