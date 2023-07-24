@@ -16,6 +16,7 @@ import Show_hide from "./conditional rendering/Show_hide";
 import Basic from "./Forms/Basic";
 import Multiple_inputs from "./Forms/Multiple_inputs";
 import Useref from "./useref/Useref";
+import Userefactor_usestate from "./useref/Userefactor_usestate";
 
 function Booklist() {
   return (
@@ -27,17 +28,6 @@ function Booklist() {
     </section>
   );
 }
-<Usestate />;
-<UseArray />;
-<Useobject />;
-<Simplecounter />;
-<Useeffect_basic />;
-<Useeffect_cleanup />;
-<Useeffect_fetchdata />;
-<Multiple_returns />;
-<Show_hide />;
-<Short_circuit />;
-<Basic />;
-<Multiple_inputs />;
 <Useref />;
-ReactDOM.render(<Useref />, document.getElementById("root"));
+<Userefactor_usestate />;
+ReactDOM.render(<Userefactor_usestate />, document.getElementById("root"));

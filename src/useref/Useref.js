@@ -1,10 +1,20 @@
-import React, { useRef } from "react";
-
+import React, { useEffect, useRef } from "react";
+//perserves a values
+//doent trigger re render
+// DOM values/nodes
 const Useref = () => {
-  const refcontainer = useRef(null);
+  let refcontainer = useRef(null);
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(refcontainer.current.value);
+    console.log(refcontainer.current);
+    // refcontainer;
+  };
+  useEffect(() => {
+    refcontainer.current.focus();
+  });
+  const handleclick = () => {
+    refcontainer.current = refcontainer.current + 1;
+    console.log(refcontainer.current);
   };
   return (
     <>
@@ -16,6 +26,9 @@ const Useref = () => {
           <button type="submit">Button</button>
         </form>
       </article>
+      <button type="button" onClick={handleclick}>
+        Click me
+      </button>
     </>
   );
 };
