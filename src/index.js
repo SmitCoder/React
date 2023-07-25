@@ -9,6 +9,7 @@ import Useobject from "./Useobject";
 import Userefactor_usestate from "./useref/Userefactor_usestate";
 import Usereducer_refactor from "./useref/Usereducer_refactor";
 import Propdrilling from "./propdrilling/Propdrilling";
+import Usecontext from "./usecontext/Usecontext";
 
 function Booklist() {
   return (
@@ -24,4 +25,5 @@ function Booklist() {
 <Userefactor_usestate />;
 <Usereducer_refactor />;
 <Propdrilling />;
-ReactDOM.render(<Propdrilling />, document.getElementById("root"));
+<Usecontext />;
+ReactDOM.render(<Usecontext />, document.getElementById("root"));
